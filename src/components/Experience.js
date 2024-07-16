@@ -47,7 +47,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="about" className="main">
+    <section id="experience" className="main">
       <div className={style.spotlight}>
         <div>
           <header className="major">

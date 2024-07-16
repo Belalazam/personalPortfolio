@@ -14,7 +14,7 @@ import './App.css';
 export default function App() {
   const [scroll, setScroll] = React.useState(false);
 
-  // fixar barra de navegação a um certo ponto
+
   React.useEffect(() => {
     const handleScroll = () => {
       switch (true) {
@@ -72,7 +72,7 @@ export default function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Achievements /> {/* Include Achievements component */}
+        <Achievements /> 
         <Contact />
       </div>
 
