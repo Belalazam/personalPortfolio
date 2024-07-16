@@ -1,0 +1,266 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button,
+textarea,
+a {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 17pt;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    135deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#wrapper {
+  width: 64em;
+  max-width: calc(100% - 4em);
+  margin: 0 auto;
+}
+
+#header {
+  animation: 1.5s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 1.5s ease 0s normal forwards 1 fadein;
+  opacity: 1;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#header {
+  padding: 7em 5em 4em 5em;
+  text-align: center;
+}
+#header h1 {
+  margin: 0 0 0.2em 0;
+  color: #ffffff;
+  font-size: 3.5em;
+  letter-spacing: -0.025em;
+}
+
+#header p {
+  font-size: 1.2em;
+  letter-spacing: -0.025em;
+}
+
+#nav {
+  transition: background-color 0.2s ease, border-top-left-radius 0.2s ease,
+    border-top-right-radius 0.2s ease, padding 0.2s ease;
+  color: #636363;
+  position: absolute;
+  width: 64em;
+  max-width: calc(100% - 4em);
+  padding: 1em 0;
+  background-color: #f7f7f7;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  cursor: default;
+  text-align: center;
+}
+
+#nav a:hover {
+  color: #636363;
+}
+
+#nav + #main {
+  padding-top: 4.25em;
+}
+
+#nav ul li {
+  transition: margin 0.2s ease;
+  display: inline-block;
+  margin: 0 0.25em;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#nav ul li a {
+  transition: font-size 0.2s ease;
+  display: inline-block;
+  height: 2.25em;
+  line-height: 2.25em;
+  padding: 0 1.25em;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px transparent;
+  color: inherit;
+}
+
+#nav ul li a:hover {
+  background-color: rgba(222, 222, 222, 0.25);
+}
+
+#nav.alt {
+  position: fixed;
+  top: 0;
+  padding: 0.5em 0;
+  background-color: rgba(247, 247, 247, 0.95);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 10000;
+}
+
+#nav.alt ul li {
+  margin: 0 0.175em;
+}
+
+#nav.alt ul li a {
+  font-size: 0.9em;
+}
+
+#main {
+  background-color: #ffffff;
+  color: #636363;
+  border-radius: 0.25em;
+}
+
+#main > .main {
+  padding: 5em 5em 3em 5em;
+  border-top: solid 1px #dddddd;
+}
+
+#main > .main.special {
+  text-align: center;
+}
+
+#main > .main:first-child {
+  border-top: 0;
+}
+
+.main .major {
+  margin: 0 0 2em 0;
+}
+
+.main .major h2 {
+  color: #636363;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0 0 0.7em 0;
+  letter-spacing: -0.025em;
+}
+
+.main .major h2::after {
+  display: block;
+  content: '';
+  width: 3.25em;
+  height: 2px;
+  margin: 0.7em 0 1em 0;
+  border-radius: 2px;
+  background-color: #dddddd;
+  background-image: linear-gradient(90deg, #4158d0, #c850c0, #ffcc70);
+}
+
+.main.special .major h2::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  body,
+  input,
+  select,
+  textarea,
+  a {
+    font-size: 12pt;
+  }
+
+  #main > .main {
+    padding: 4em 4em 2em 4em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #main > .main {
+    padding: 4em 3em 2em 3em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #main > .main {
+    padding: 3em 2em 1em 2em;
+  }
+
+  #header h1 {
+    font-size: 2.5em;
+  }
+
+  #header p {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper {
+    max-width: calc(100% - 2em);
+  }
+
+  #main > .main {
+    padding: 3em 1.5em 1em 1.5em;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #nav + #main {
+    padding-top: 0;
+  }
+
+  .main .major h2::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 11pt;
+  }
+
+  #wrapper {
+    max-width: 100%;
+  }
+
+  #main {
+    border-radius: 0;
+  }
+
+  #main > .main {
+    padding: 2.5em 1em 0.5em 1em;
+  }
+}

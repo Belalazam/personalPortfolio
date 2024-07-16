@@ -1,0 +1,92 @@
+.skills {
+  display: flex;
+  width: 100%;
+  margin: 0 0 3em 0;
+  padding: 0;
+  list-style: none;
+  cursor: default;
+}
+
+.skills li {
+  flex: 1;
+  padding: 1.5em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.skills li.style1 {
+  background-color: #efa8b0;
+}
+
+.skills li.style2 {
+  background-color: #c79cc8;
+}
+
+.skills li.style3 {
+  background-color: #a89cc8;
+}
+
+.skills li.style4 {
+  background-color: #9bb2e1;
+}
+
+.skills li.style5 {
+  background-color: #8cc9f0;
+}
+
+.skills li strong {
+  display: block;
+  line-height: 1.1;
+  color: inherit !important;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+}
+
+.skills li:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.skills li:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.skills li span {
+  display: inline-block;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .skills li {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills {
+    display: block;
+    width: 20em;
+    max-width: 100%;
+    margin: 0 auto 2em auto;
+  }
+
+  .skills li:first-child {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+  }
+
+  .skills li:last-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+
+  .skills li span {
+    font-size: 4rem;
+  }
+
+  .skills li strong {
+    font-size: 13pt;
+  }
+}
